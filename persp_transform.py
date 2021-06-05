@@ -7,7 +7,7 @@ input_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 rows, cols, channels = input_image.shape
 
 points1 = np.float32([[0, 0], [400, 0], [0, 400], [400, 400]])
-points2 = np.float32([[0,0], [300, 0], [0, 300], [300, 300]])
+points2 = np.float32([[0,0], [200, 0], [0, 300], [300, 300]])
 
 P = cv2.getPerspectiveTransform(points1, points2)
 output = cv2.warpPerspective(input_image, P, (300, 300))
